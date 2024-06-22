@@ -8,10 +8,37 @@
 </head>
 <body>
     <main>
-        <img src="styles/assets/Jogo da Velha.png" alt="">
-        <div class="option--buttons">
-            <button id="option--2players">2 Jogadores</button>
-            <button id="option--ia">Conta IA</button>
+        <div id="menu">
+            <img src="styles/assets/Jogo da Velha.png" alt="jogo da velha">
+            <div class="option--buttons">
+                <button id="option--2players">2 Jogadores</button>
+                <button id="option--ia">Conta IA</button>
+            </div>
+        </div>
+        <div id="game" class="hide">
+            <button id="back--menu">Menu</button>
+            <img src="styles/assets/Jogo da Velha.png" alt="jogo da velha">
+            <div class="game--content">
+                <div class='placar' id="p1--placar">
+                    <h2>Player 1</h2>
+                    <p id="p1--points">0</p>
+                </div>
+                <div class="board">
+                    <div class="box" id="box1"></div>
+                    <div class="box" id="box2"></div>
+                    <div class="box" id="box3"></div>
+                    <div class="box" id="box4"></div>
+                    <div class="box" id="box5"></div>
+                    <div class="box" id="box6"></div>
+                    <div class="box" id="box7"></div>
+                    <div class="box" id="box8"></div>
+                    <div class="box" id="box9"></div>
+                </div>
+                <div class='placar' id="p2--placar">
+                    <h2>Player 2</h2>
+                    <p id="p2--points">0</p>
+                </div>
+            </div>
         </div>
     </main>
     <footer>

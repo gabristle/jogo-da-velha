@@ -37,41 +37,140 @@ body{
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        img{
-            animation-duration: 2s;
-            animation-name: slidein;    
-            width: 500px;
-            margin-bottom: 50px;
+        button{
+            font-family: 'Sancreek', serif;
+            width: 100%;
+            height: 60px;
+            font-size: 18px;
+            background-color: transparent;
+            border-radius: 10px;
+            cursor: pointer;
+            &#option--2players{
+                color: var(--blue);
+                border: 2px solid var(--blue);
+                &:hover{
+                    background-color: var(--blue);
+                    color: var(--black);
+                }
+            }
+            &#option--ia{
+                color: var(--pink);
+                border: 2px solid var(--pink);
+                &:hover{
+                    background-color: var(--pink);
+                    color: var(--black);
+                }
+            } 
+            &#back--menu{
+                position: absolute;
+                top: 15px;
+                left: 15px;
+                width: 120px;
+                color: var(--blue);
+                border: 2px solid var(--blue);
+                &:hover{
+                    background-color: var(--blue);
+                    color: var(--black);
+                }
+            }
         }
-        .option--buttons{
-            display: flex;
-            width: 450px;
-            justify-content: space-between;
-            gap: 10%;
-            button{
-                font-family: 'Sancreek', serif;
+        #menu{
+            img{
+                animation-duration: 2s;
+                animation-name: slidein;    
+                width: 500px;
+                margin-bottom: 50px;
+            }
+            .option--buttons{
+                display: flex;
                 width: 100%;
-                height: 60px;
-                font-size: 18px;
-                background-color: transparent;
-                border-radius: 10px;
-                cursor: pointer;
-                &#option--2players{
-                    color: var(--blue);
-                    border: 2px solid var(--blue);
-                    &:hover{
-                        background-color: var(--blue);
-                        color: var(--black);
+                justify-content: space-between;
+                gap: 10%;
+                
+            }
+            &.hide{
+                display: none;
+            }
+        }
+        #game{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            img{
+                align-self: center;
+                margin-bottom: 50px;
+            }
+            .game--content{
+                display: flex;
+                width: 100%;
+                justify-content: space-evenly;
+                align-items: center;
+                .placar{
+                    text-align: center;
+                    h2{
+                        font-family: 'Sancreek', serif;
+                        margin-bottom: 1rem;
+                    }
+                    p{
+                        font-size: 60px;
                     }
                 }
-                &#option--ia{
-                    color: var(--pink);
-                    border: 2px solid var(--pink);
-                    &:hover{
-                        background-color: var(--pink);
-                        color: var(--black);
+                .board{
+                    display: grid;
+                    grid-template-areas: 'box1 box2 box3' 'box4 box5 box6' 'box7 box8 box9';
+                    width: 450px;
+                    height: 450px;
+                    .box{
+                        width: 150px;
+                        height: 150px;
+                        background-color: transparent;
+                    }
+                    #box1{
+                        grid-area: box1;
+                        border-right: 15px solid var(--black);
+                        border-bottom: 15px solid var(--black);
+                    }
+                    #box2{
+                        grid-area: box2;
+                        border-right: 15px solid var(--black);
+                        border-bottom: 15px solid var(--black);
+                    }
+                    #box3{
+                        grid-area: box3;
+                        border-bottom: 15px solid var(--black);
+                    }
+                    #box4{
+                        grid-area: box4;
+                        border-right: 15px solid var(--black);
+                        border-bottom: 15px solid var(--black);
+                    }
+                    #box5{
+                        grid-area: box5;
+                        border-right: 15px solid var(--black);
+                        border-bottom: 15px solid var(--black);
+                    }
+                    #box6{
+                        grid-area: box6;
+                        border-bottom: 15px solid var(--black);
+                    }
+                    #box7{
+                        grid-area: box7;
+                        border-right: 15px solid var(--black);
+                    }
+                    #box8{
+                        grid-area: box8;
+                        border-right: 15px solid var(--black);
+                    }
+                    #box9{
+                        grid-area: box9;
                     }
                 }
+            }
+            &.hide{
+                display: none;
             }
         }
     }
