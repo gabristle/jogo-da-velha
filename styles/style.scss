@@ -1,0 +1,103 @@
+@font-face {
+    font-family: "Sanchez";
+    src: url(assets/fonts/Sanchez/Sanchez-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Sancreek";
+    src: url(assets/fonts/Sancreek/Sancreek-Regular.ttf);
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Sanchez", serif;
+}
+
+:root {
+    --pink: #F20544;
+    --blue: #0597F2;
+    --orange: #F27405;
+    --black: #1D1D1D;
+    --gray: #48484866;
+    --white: #D3D3D3;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    color: var(--white);
+    background: var(--black);
+    background-image: radial-gradient(circle, var(--gray) 0%, var(--black) 100%);
+    main{
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        img{
+            animation-duration: 2s;
+            animation-name: slidein;    
+            width: 500px;
+            margin-bottom: 50px;
+        }
+        .option--buttons{
+            display: flex;
+            width: 450px;
+            justify-content: space-between;
+            gap: 10%;
+            button{
+                font-family: 'Sancreek', serif;
+                width: 100%;
+                height: 60px;
+                font-size: 18px;
+                background-color: transparent;
+                border-radius: 10px;
+                cursor: pointer;
+                &#option--2players{
+                    color: var(--blue);
+                    border: 2px solid var(--blue);
+                    &:hover{
+                        background-color: var(--blue);
+                        color: var(--black);
+                    }
+                }
+                &#option--ia{
+                    color: var(--pink);
+                    border: 2px solid var(--pink);
+                    &:hover{
+                        background-color: var(--pink);
+                        color: var(--black);
+                    }
+                }
+            }
+        }
+    }
+    footer{
+        width: 100%;
+        position: absolute;
+        bottom: 15px;
+        text-align: center;
+        a{
+            color: var(--pink);
+            &:hover{
+                color: var(--blue);
+            }
+        }
+    }
+    a{
+        text-decoration: none;
+    }
+}
+
+@keyframes slidein {
+    from {
+      margin-bottom: 60%;
+    }
+  
+    to {
+      margin-bottom: 50px;
+    }
+}
